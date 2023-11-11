@@ -34,7 +34,7 @@ jobs:
         inlineScript: |
           echo "Starting Deploying"
           zip -r functionapp.zip .
-          az functionapp deployment source sync --resource-group DefaultResourceGroup-EUS --name MyPythonFunctionApp --src ./functionapp.zip --build-remote true
+          az functionapp deployment source config-zip --resource-group DefaultResourceGroup-EUS --name MyPythonFunctionApp --src ./functionapp.zip --build-remote true
 
 
   
